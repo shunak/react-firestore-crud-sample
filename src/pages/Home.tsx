@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <header className='header-page'>
-        <h1>Home(要ログイン)</h1>
+        <h1>Home( Login )</h1>
         <div className='wrap-header-page'>
           <p>
             <strong>{user?.email}でログイン中</strong>
