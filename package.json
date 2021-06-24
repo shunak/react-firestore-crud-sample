@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/shunak/react-firestore-crud-sample.git",
+  "author": "shuhe1 <shu-ch@mbs.co.jp>",
+  "license": "MIT"
 }
