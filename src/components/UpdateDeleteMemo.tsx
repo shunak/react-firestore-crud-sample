@@ -40,9 +40,9 @@ const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
 
   return (
     <div className='wrap-update-delete-memo'>
-      <textarea onChange={(e) => setInput(e.target.value)}>
+      {/* <textarea onChange={(e) => setInput(e.target.value)}> */}
         {memo.body}
-      </textarea>
+      {/* </textarea> */}
       <button onClick={onUpdate}>更新</button>
       <button onClick={onDelete}>削除</button>
       <hr />
