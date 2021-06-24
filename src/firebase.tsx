@@ -81,7 +81,7 @@ export const FirebaseProvider: React.FC = ({ children }) => {
   }, [])
 
   if (loading) {
-    return <div className='loading'>ローディング中...</div>
+    return <div className='loading'>Now Loading...</div>
   }
 
   return (
