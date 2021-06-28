@@ -4,10 +4,12 @@ import { FirebaseContext } from '../contexts'
 import { Memo } from '../models'
 import UpdateDeleteMemo from './UpdateDeleteMemo'
 import { collectionName } from '../consts'
+import dayjs from 'dayjs'
 
 const MemoList: React.FC = () => {
   const [memos, setMemos] = useState<Memo[]>([
-    { id: '', body: '', creater: '', createdAt: null, updatedAt: null },
+    { id: '', body: '', creater: '', createdAt: '', updatedAt: ''},
+    /* { id: '', body: '', creater: '', createdAt: null, updatedAt: null }, */
   ])
   const { user } = useContext(FirebaseContext)
 
@@ -24,6 +26,8 @@ const MemoList: React.FC = () => {
             creater: doc.data().creater,
             createdAt: doc.data().createdAt,
             updatedAt: doc.data().updatedAt,
+            /* createdAt: doc.data().createdAt.toDate(), */
+            /* updatedAt: doc.data().updatedAt.toDate(), */
           }))
           // 取得したメモ一覧をcreatedAtの降順に並び替え
           data.sort((a, b) => {

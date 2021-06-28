@@ -16,9 +16,11 @@ const CreateMemo: React.FC = () => {
       await addDoc(collectionName.memos, {
         body: input,
         creater: user ? user.email : null,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        createdAt: firebase.firestore.Timestamp.now(),
+        updatedAt: firebase.firestore.Timestamp.now(),
       })
+        /* createdAt: firebase.firestore.FieldValue.serverTimestamp(), */
+        /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
 
       setInput('')
     },

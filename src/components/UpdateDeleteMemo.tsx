@@ -4,11 +4,11 @@ import { updateDoc, deleteDoc } from '../firebase'
 import { FirebaseContext } from '../contexts'
 import { Memo } from '../models'
 import { collectionName } from '../consts'
+import dayjs from 'dayjs'
 
 const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
   const [input, setInput] = useState('')
   const { user } = useContext(FirebaseContext)
-
   const onUpdate = useCallback(
     (event) => {
       event.preventDefault()
@@ -18,9 +18,10 @@ const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
         body: input,
         creater: user ? user.email : null,
         createdAt: memo.createdAt,
-        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        updatedAt: firebase.firestore.Timestamp.now(),
       })
 
+        /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
       alert('更新しました。')
     },
     [input]
@@ -40,12 +41,15 @@ const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
 
   return (
     <div className='wrap-update-delete-memo'>
-      {/* <textarea onChange={(e) => setInput(e.target.value)}> */}
+      {/* <textarea onChange={(e) => setInput(e.target.value)}> *1/} */}
         {memo.body}
+		{memo.createdAt.seconds}
+		{/* {memo.createdAt.toString()} */}
+		{/* {memo.createdAt._seconds * 1000} */}
       {/* </textarea> */}
-      <button onClick={onUpdate}>更新</button>
+      {/* <button onClick={onUpdate}>更新</button> */}
       <button onClick={onDelete}>削除</button>
-      <hr />
+	<hr />
     </div>
   )
 }
