@@ -5,7 +5,7 @@ import { FirebaseContext } from '../contexts'
 import firebase from 'firebase/app'
 import { collectionName } from '../consts'
 
-const CreateMemo: React.FC = () => {
+const CreateMemo2: React.FC = () => {
   const [input, setInput] = useState('')
   const { user } = useContext(FirebaseContext)
 
@@ -23,7 +23,7 @@ const CreateMemo: React.FC = () => {
         /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
 
       /* setInput('') */
-      setInput('在席 ')
+      setInput('離席 ')
     },
     [input]
   )
@@ -37,11 +37,13 @@ const CreateMemo: React.FC = () => {
       {/* /> */}
       {/* <button onClick={onCreate} disabled={!input}> */}
 		<button onClick={onCreate}>
-			テレワーク開始
+			テレワーク中断・終了
       </button>
     </div>
   )
 }
 
 
-export default withRouter(CreateMemo)
+
+
+export default withRouter(CreateMemo2)

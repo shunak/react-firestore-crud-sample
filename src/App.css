@@ -64,11 +64,11 @@ textarea {
 }
 
 button {
-  width: 150px;
+  width: 200px;
   margin: 5px;
   padding: 5px;
   font-size: 1rem;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   border: 2px solid steelblue;
   border-radius: 5px;
 }

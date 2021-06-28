@@ -43,7 +43,7 @@ const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
     <div className='wrap-update-delete-memo'>
       {/* <textarea onChange={(e) => setInput(e.target.value)}> *1/} */}
         {memo.body}
-		{dayjs.unix(memo.createdAt.seconds).format('YYYY/MM/DD hh:mm:ss')}
+		{dayjs.unix(memo.createdAt.seconds).format('YYYY/MM/DD HH:mm:ss')}
 		{/* {memo.createdAt.toString()} */}
 		{/* {memo.createdAt._seconds * 1000} */}
       {/* </textarea> */}

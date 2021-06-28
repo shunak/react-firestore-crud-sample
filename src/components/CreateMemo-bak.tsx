@@ -22,26 +22,23 @@ const CreateMemo: React.FC = () => {
         /* createdAt: firebase.firestore.FieldValue.serverTimestamp(), */
         /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
 
-      /* setInput('') */
-      setInput('在席 ')
+      setInput('')
     },
     [input]
   )
+
   return (
-	  <div >
-    {/* <div className='wrap-create-memo'> */}
-      {/* <textarea */}
-      {/*   placeholder='メモを入力してください。' */}
-      {/*   value={input} */}
-      {/*   onChange={(e) => setInput(e.target.value)} */}
-      {/* /> */}
-      {/* <button onClick={onCreate} disabled={!input}> */}
-		<button onClick={onCreate}>
-			テレワーク開始
+    <div className='wrap-create-memo'>
+      <textarea
+        placeholder='メモを入力してください。'
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={onCreate} disabled={!input}>
+		  打刻
       </button>
     </div>
   )
 }
-
 
 export default withRouter(CreateMemo)
