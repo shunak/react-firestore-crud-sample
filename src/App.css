@@ -11,14 +11,14 @@
   min-width: 30%;
   height: 350px;
   margin: 10px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 .wrap-signup {
   min-width: 30%;
   height: 350px;
   margin: 10px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 .header-auth, .header-page {
@@ -50,7 +50,7 @@ input {
   width: 80%;
   margin: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 10px;
 }
 
@@ -59,7 +59,7 @@ textarea {
   height: 100px;
   margin: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 10px;
 }
 
@@ -69,7 +69,7 @@ button {
   padding: 5px;
   font-size: 1rem;
   /* background-color: lightblue; */
-  border: 2px solid steelblue;
+  /* border: 2px solid steelblue; */
   border-radius: 5px;
 }
 
@@ -78,7 +78,8 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .wrap-home {
@@ -93,7 +94,7 @@ button:hover {
   margin-left: 30px;
   padding-top: 10px;
   text-align: center;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 
 .wrap-memo-list{
@@ -109,7 +110,7 @@ button:hover {
 
 hr {
   width: 90%;
-  border-color: whitesmoke;
+  /* border-color: whitesmoke; */
 }
 
 .loading {
@@ -121,7 +122,7 @@ hr {
 
 .wrap-home p {
   font-size: 2rem;
-  color: white;
+  /* color: white; */
 }
 
 @media screen and (max-width: 720px) {
