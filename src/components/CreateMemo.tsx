@@ -14,16 +14,23 @@ const CreateMemo: React.FC = () => {
       event.preventDefault()
 
       await addDoc(collectionName.memos, {
-        body: input,
+		body: '　在席 ',
         creater: user ? user.email : null,
         createdAt: firebase.firestore.Timestamp.now(),
         updatedAt: firebase.firestore.Timestamp.now(),
-      })
+      }
+      /* await addDoc(collectionName.memos, { */
+      /*   body: input, */
+      /*   creater: user ? user.email : null, */
+      /*   createdAt: firebase.firestore.Timestamp.now(), */
+      /*   updatedAt: firebase.firestore.Timestamp.now(), */
+      /* } */
+	)
         /* createdAt: firebase.firestore.FieldValue.serverTimestamp(), */
         /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
 
       /* setInput('') */
-      setInput('在席 ')
+      setInput('')
     },
     [input]
   )

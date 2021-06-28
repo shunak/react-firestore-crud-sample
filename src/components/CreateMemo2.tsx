@@ -14,7 +14,7 @@ const CreateMemo2: React.FC = () => {
       event.preventDefault()
 
       await addDoc(collectionName.memos, {
-        body: input,
+        body: '　離席 ',
         creater: user ? user.email : null,
         createdAt: firebase.firestore.Timestamp.now(),
         updatedAt: firebase.firestore.Timestamp.now(),
@@ -23,7 +23,7 @@ const CreateMemo2: React.FC = () => {
         /* updatedAt: firebase.firestore.FieldValue.serverTimestamp(), */
 
       /* setInput('') */
-      setInput('離席 ')
+      setInput('')
     },
     [input]
   )
