@@ -44,13 +44,14 @@ const UpdateDeleteMemo: React.FC<{ memo: Memo }> = ({ memo }) => {
       {/* <textarea onChange={(e) => setInput(e.target.value)}> *1/} */}
 		{"最終更新："}
 		{dayjs.unix(memo.createdAt.seconds).format('MM/DD HH:mm')}
+		{"　"}
         {memo.body}
 		{/* {memo.createdAt.toString()} */}
 		{/* {memo.createdAt._seconds * 1000} */}
       {/* </textarea> */}
       {/* <button onClick={onUpdate}>更新</button> */}
-      <button onClick={onDelete}>削除</button>
-	<hr />
+      {/* <button onClick={onDelete}>削除</button> */}
+	{/* <hr /> */}
     </div>
   )
 }

@@ -17,7 +17,7 @@ const MemoList: React.FC = () => {
     if (user) {
       const unsub = db
         .collection(collectionName.memos)
-        .where('creater', '==', user.email)
+		.where('creater', '==', user.email)
         .onSnapshot((snapshot) => {
           // DBからメモ一覧を取得
           const data = snapshot.docs.map((doc) => ({
@@ -26,8 +26,6 @@ const MemoList: React.FC = () => {
             creater: doc.data().creater,
             createdAt: doc.data().createdAt,
             updatedAt: doc.data().updatedAt,
-            /* createdAt: doc.data().createdAt.toDate(), */
-            /* updatedAt: doc.data().updatedAt.toDate(), */
           }))
           // 取得したメモ一覧をcreatedAtの降順に並び替え
           data.sort((a, b) => {
@@ -40,7 +38,13 @@ const MemoList: React.FC = () => {
               return -1
             }
           })
-          setMemos(data)
+          /* setMemos(data) */
+          if(!data.length){
+			setMemos(data)
+		  }else{
+			setMemos([data[0]])
+		  }
+
         })
 
       return () => unsub()

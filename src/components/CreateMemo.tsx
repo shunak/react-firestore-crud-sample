@@ -14,7 +14,7 @@ const CreateMemo: React.FC = () => {
       event.preventDefault()
 
       await addDoc(collectionName.memos, {
-		body: '　在席 ',
+		body: '在席',
         creater: user ? user.email : null,
         createdAt: firebase.firestore.Timestamp.now(),
         updatedAt: firebase.firestore.Timestamp.now(),
