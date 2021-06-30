@@ -16,17 +16,17 @@ const Top: React.FC<RouteComponentProps> = ({ history }) => {
   return (
     <div className='wrap-top'>
       <div className='wrap-login'>
-        <div>
-          <LoginWithEmail />
-        </div>
-        <hr />
+        {/* <div> */}
+        {/*   <LoginWithEmail /> */}
+        {/* </div> */}
+        {/* <hr /> */}
         <div>
           <LoginWithGoogle />
         </div>
       </div>
-      <div className='wrap-signup'>
-        <SignupWithEmail />
-      </div>
+      {/* <div className='wrap-signup'> */}
+      {/*   <SignupWithEmail /> */}
+      {/* </div> */}
     </div>
   )
 }

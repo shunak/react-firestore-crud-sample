@@ -14,7 +14,7 @@ const Home = () => {
         <h1>テレワーク打刻</h1>
         <div className='wrap-header-page'> 
           <p>
-            <strong>{user?.email}でログイン中</strong>
+            <strong>{user?.email}</strong>
           </p>
           <button onClick={logout}>ログアウト</button>
         </div>

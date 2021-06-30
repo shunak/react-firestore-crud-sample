@@ -8,7 +8,6 @@ import { collectionName } from '../consts'
 const CreateMemo: React.FC = () => {
   const [input, setInput] = useState('')
   const { user } = useContext(FirebaseContext)
-
   const onCreate = useCallback(
     async (event) => {
       event.preventDefault()
@@ -35,14 +34,14 @@ const CreateMemo: React.FC = () => {
     [input]
   )
   return (
-	  <div >
+	  <div>
     {/* <div className='wrap-create-memo'> */}
-      {/* <textarea */}
-      {/*   placeholder='メモを入力してください。' */}
-      {/*   value={input} */}
-      {/*   onChange={(e) => setInput(e.target.value)} */}
-      {/* /> */}
-      {/* <button onClick={onCreate} disabled={!input}> */}
+    {/*   <textarea */}
+    {/*     placeholder='メモを入力してください。' */}
+    {/*     value={input} */}
+    {/*     onChange={(e) => setInput(e.target.value)} */}
+    {/*   /> */}
+    {/*   <button onClick={onCreate} disabled={!input}> */}
 		<button onClick={onCreate}>
 			テレワーク開始
       </button>
