@@ -73,6 +73,11 @@ button {
   border-radius: 5px;
 }
 
+
+.btn-logout {
+	width: 100px;
+}
+
 .btn-google {
   margin-top: 20px;
 }
