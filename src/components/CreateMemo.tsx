@@ -4,6 +4,7 @@ import { addDoc } from '../firebase'
 import { FirebaseContext } from '../contexts'
 import firebase from 'firebase/app'
 import { collectionName } from '../consts'
+import  Button from '../../node_modules/@material-ui/core/Button'                                                                                                               
 
 const CreateMemo: React.FC = () => {
   const [input, setInput] = useState('')
@@ -42,9 +43,10 @@ const CreateMemo: React.FC = () => {
     {/*     onChange={(e) => setInput(e.target.value)} */}
     {/*   /> */}
     {/*   <button onClick={onCreate} disabled={!input}> */}
-		<button onClick={onCreate}>
+		{/* <button onClick={onCreate}> */}
+		<Button variant="contained" onClick={onCreate} >
 			テレワーク開始
-      </button>
+      </Button>
     </div>
   )
 }
