@@ -15,15 +15,15 @@ const Home = () => {
   return (
     <>
       <header className='header-page'>
-		  <Typography color="textSecondary">
+		  {/* <Typography color="textSecondary"> */}
         <h1>テレワーク打刻</h1>
-		  </Typography>
+		  {/* </Typography> */}
         <div className='wrap-header-page'> 
           <p>
             <strong>{user?.email}</strong>
           </p>
-          <button className='btn-logout' onClick={logout}><FontAwesomeIcon icon={ faSignOutAlt } /></button>
-			<Button>About</Button>
+          {/* <button className='btn-logout' onClick={logout}><FontAwesomeIcon icon={ faSignOutAlt } /></button> */}
+			<Button onClick={logout}>Logout <FontAwesomeIcon icon={faSignOutAlt}/></Button>
         </div>
       </header>
       <div className='wrap-home'>
